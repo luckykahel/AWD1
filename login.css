@@ -486,8 +486,7 @@ nav .logo {
   }
 
   nav .logo {
-    height: 20px;
-    margin-left: 10px;
+    display: none;
   }
 
   nav .mainMenu .closeMenu {
