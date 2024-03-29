@@ -460,16 +460,20 @@ nav .mainMenu .closeMenu,
 .fa-github:hover {
   color: rgb(255, 123, 0);
 }
+
 nav .logo {
   display: flex;
   height: 70px;
-  margin-left: 30px;
   margin: 6px;
   cursor: pointer;
-  text-transform: uppercase;
 }
 
 @media (max-width: 800px) {
+  nav .logo {
+    height: 50px;
+    margin-left: 10px; 
+  }
+
   nav .mainMenu {
     height: 100vh;
     position: fixed;
