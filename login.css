@@ -469,11 +469,6 @@ nav .logo {
 }
 
 @media (max-width: 800px) {
-  nav .logo {
-    height: 50px;
-    margin-left: 10px; 
-  }
-
   nav .mainMenu {
     height: 100vh;
     position: fixed;
@@ -488,6 +483,11 @@ nav .logo {
     transition: top 1s ease 0s;
     display: none;
   }
+
+  nav .logo {
+    display: none;
+  }
+
   nav .mainMenu .closeMenu {
     display: block;
     position: absolute;
