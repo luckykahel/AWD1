@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
     <link rel="stylesheet" href="login.css" />
     <link rel="icon" type="image/jpeg" href="Images/Pokémon_GO_Icon.jpeg">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
@@ -12,17 +13,29 @@
   <body>
     <header class="header">
         <nav class="navbar" id="navbar">
-            <div class="left-side">
+            <div class="logo">
                 <img src="anitaHeader.png">
             </div>
-            <div class="center" id="myLinks">
-                <a href="#">Home</a>
-                <a href="#">Store</a>
-                <a href="#">Cart</a>
-                <a href="#">Profile</a>
-                <a href="#">Account</a>
-                <a href="index.html">Sign in</a>
+            <div class="openMenu">
+                <i class="fa fa-bars"></i>
             </div>
+            <ul class="mainMenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="login.html">Sign in</a></li>
+                <div class="closeMenu">
+                    <i class="fa fa-times"></i>
+                </div>
+                <span class="icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-github"></i>
+                </span>
+            </ul>
         </nav>
     </header>
     <div class="container">
