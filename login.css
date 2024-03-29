@@ -150,12 +150,12 @@ form.sign-in-form {
 
 .btn {
   width: 150px;
-  background-color: #5995fd;
+  background-color: #FF0000;
   border: none;
   outline: none;
   height: 49px;
   border-radius: 49px;
-  color: #000000;
+  color: #ffff;
   text-transform: uppercase;
   font-weight: 600;
   margin: 10px 0;
@@ -164,7 +164,7 @@ form.sign-in-form {
 }
 
 .btn:hover {
-  background-color: #4d84e2;
+  background-color: #c81c1ccc;
 }
 .panels-container {
   position: absolute;
@@ -232,15 +232,7 @@ form.sign-in-form {
   padding: 0.7rem 0;
 }
 
-.btn.transparent {
-  margin: 0;
-  background: none;
-  border: 2px solid #050000;
-  width: 130px;
-  height: 41px;
-  font-weight: 600;
-  font-size: 0.8rem;
-}
+
 
 .right-panel .image,
 .right-panel .content {
@@ -414,16 +406,18 @@ form.sign-in-form {
 }
 
 nav {
-  background: rgb(0, 0, 0);
+  background: #0C1C3E;
   color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 nav .mainMenu {
   display: flex;
   list-style: none;
 }
+
 nav .mainMenu li a {
   display: inline-block;
   padding: 15px;
@@ -434,7 +428,7 @@ nav .mainMenu li a {
   transition: 0.2s ease;
 }
 nav .mainMenu li a:hover {
-  background: rgb(255, 94, 0);
+  box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
 }
 nav .openMenu {
   font-size: 2rem;
@@ -457,9 +451,6 @@ nav .mainMenu .closeMenu,
 .fa-instagram:hover {
   color: rgb(255, 0, 191);
 }
-.fa-github:hover {
-  color: rgb(255, 123, 0);
-}
 
 nav .logo {
   display: flex;
@@ -468,6 +459,132 @@ nav .logo {
   margin-left: 70px;
   cursor: pointer;
 }
+
+nav .mainMenu {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  list-style: none;
+}
+
+.ani{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  float: right;
+  margin: 20px;
+  width: 130px;
+  height: 50px;
+  border-radius: 75px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  background: #0C1C3E;
+  color: white;
+  letter-spacing: 3px;
+  transition: 1s box-shadow;
+  }
+
+  .ani:hover{
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1); 
+  }
+  
+  .ani:hover::before, 
+  .ani:hover::after{
+  display: block;
+  content: '';
+  position: absolute;
+  width: 130px;
+  height: 50px;
+  background: #CA1D0D;
+  border-radius: 75px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+  }
+  
+  .ani:hover:after{
+  background: #F4F3F9;
+  animation: 2s counterclockwise infinite;
+  }
+  
+  @keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;    
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;    
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;    
+  }
+  }
+  
+  @keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;    
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;    
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;    
+  }
+  }
 
 @media (max-width: 800px) {
   nav .mainMenu {
@@ -480,7 +597,7 @@ nav .logo {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgb(0, 0, 0);
+    background: #0C1C3E;
     transition: top 1s ease 0s;
     display: none;
   }
@@ -500,10 +617,13 @@ nav .logo {
   }
   nav .mainMenu li a:hover {
     background: none;
-    color: rgb(255, 123, 0);
+
   }
   .icons i {
     display: inline-block;
     padding: 12px;
   }
 }
+
+
+  
