@@ -13,42 +13,6 @@ body {
     width: 100%;
 }
 
-.header {
-  background: #333;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-}
-
-.left-side img {
-  display: flex;
-  height: 70px;
-  margin-left: 30px;
-}
-
-.center {
-  display: flex;
-}
-
-.navbar a {
-  font-size: 16px;
-  color: #fff;
-  margin-right: 30px;
-  text-decoration: none;
-}
-
-.navbar a:last-child {
-  margin-right: 0;
-}
-
-.navbar a:hover {
-  color: #000000;
-}
-
 body, input {
   font-family: "Poppins", sans-serif;
 }  
@@ -449,32 +413,92 @@ form.sign-in-form {
   }
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .left-side img {
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
-
-  .center {
-    margin-bottom: 10px;
-  }
-
-  .navbar a {
-    margin: 5px 0;
-  }
-
-  .panels-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-
-  .panel {
-    padding: 2rem 2rem;
-  }
+nav {
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .mainMenu {
+  display: flex;
+  list-style: none;
+}
+nav .mainMenu li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+nav .mainMenu li a:hover {
+  background: rgb(255, 94, 0);
+}
+nav .openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+nav .mainMenu .closeMenu,
+.icons i {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+.fa-facebook:hover {
+  color: rgb(0, 110, 255);
+}
+.fa-twitter:hover {
+  color: rgb(86, 154, 243);
+}
+.fa-instagram:hover {
+  color: rgb(255, 0, 191);
+}
+.fa-github:hover {
+  color: rgb(255, 123, 0);
+}
+nav .logo {
+  display: flex;
+  height: 70px;
+  margin-left: 30px;
+  margin: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
+@media (max-width: 800px) {
+  nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    transition: top 1s ease 0s;
+    display: none;
+  }
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  nav .openMenu {
+    display: block;
+  }
+  nav .mainMenu li a:hover {
+    background: none;
+    color: rgb(255, 123, 0);
+  }
+  .icons i {
+    display: inline-block;
+    padding: 12px;
+  }
+}
